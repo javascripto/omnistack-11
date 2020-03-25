@@ -1,0 +1,49 @@
+
+GET http://localhost:3333/ongs
+
+###
+
+GET http://localhost:3333/incidents?page=2
+
+###
+
+GET http://localhost:3333/profile
+Authorization: 3553eedb
+
+###
+
+POST http://localhost:3333/ongs
+Content-Type: application/json
+
+{
+  "name": "APAD",
+  "email": "contato@apad.com.br",
+  "whatsapp": "12234739043",
+  "city": "Rio do Sul",
+  "uf": "SC"
+}
+
+###
+
+POST http://localhost:3333/incidents
+Content-Type: application/json
+Authorization: 3553eedb
+
+{
+  "title": "Caso 1",
+  "description": "Descrição deo caso",
+  "value": 120
+}
+
+###
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "id": "3553eedb"
+}
+
+###
+DELETE http://localhost:3333/incidents/1
+Authorization: 3553eedb
